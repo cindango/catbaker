@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baker Cat</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        max-width: 100%;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="catbaker.webp" alt="Cartoon of a cat baking a loaf of bread">
+    <button id="bakerCatBtn">Baker Cat</button>
+    <audio id="classicalMusic" src="https://ia803205.us.archive.org/23/items/classical_music-2017/Sex%20Pistols%201.mp3"></audio>
+</div>
+<script>
+    document.getElementById('bakerCatBtn').addEventListener('click', function() {
+        var audio = document.getElementById('classicalMusic');
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    });
+</script>
+</body>
+</html>
